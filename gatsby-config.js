@@ -1,11 +1,38 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `Headless.page | A curated list of headless e-commerce sites`,
+    description: `A curated list of headless e-commerce sites.  We've listed sites which are taking advantage of technologies such as PWA (Progress Web Application), Headless, JAMstack, Serverless.`,
+    author: `Garth Brantley <garth.brantley@pilon.io>`,
+    siteUrl: `https://headless.page`,
   },
   plugins: [
-    `gatsby-plugin-react-helmet`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/content/sites`,
+        name: `sites`,
+      },
+    },
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 800,
+            },
+          },
+          {
+            resolve: "gatsby-remark-external-links",
+            options: {
+              target: "_blank",
+              rel: "noopener noreferrer"
+            }
+          }
+        ]
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -15,20 +42,30 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
-        start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
+        name: `Headless.page`,
+        short_name: `Headless.page`,
+        start_url: `https://headless.page`,
+        background_color: `#fff`,
+        theme_color: `#fff`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/headless-icon.png`, // This path is relative to the root of the site.
       },
     },
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.app/offline
-    // 'gatsby-plugin-offline',
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: "UA-124605239-2",
+        anonymize: true,
+        respectDNT: true,
+      },
+    },
+    'gatsby-plugin-offline',
+    `gatsby-plugin-styled-components`,
+    `gatsby-plugin-sitemap`,
+    `gatsby-plugin-netlify`, // make sure to put last in the array
   ],
 }

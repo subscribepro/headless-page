@@ -1,25 +1,40 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "headless-page",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
-  "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "description": "A curated list of headless e-commerce sites",
+  "version": "1.0.0",
+  "author": "Garth Brantley <garth.brantley@pilon.io>",
   "dependencies": {
+    "babel-plugin-styled-components": "^1.10.0",
     "gatsby": "^2.0.76",
     "gatsby-image": "^2.0.20",
+    "gatsby-plugin-google-analytics": "^2.0.9",
     "gatsby-plugin-manifest": "^2.0.9",
-    "gatsby-plugin-offline": "^2.0.16",
+    "gatsby-plugin-netlify": "^2.0.6",
+    "gatsby-plugin-offline": "^2.0.21",
     "gatsby-plugin-react-helmet": "^3.0.2",
     "gatsby-plugin-sharp": "^2.0.14",
+    "gatsby-plugin-sitemap": "^2.0.4",
+    "gatsby-plugin-styled-components": "^3.0.4",
+    "gatsby-remark-external-links": "^0.0.4",
+    "gatsby-remark-images": "^3.0.1",
     "gatsby-source-filesystem": "^2.0.8",
+    "gatsby-transformer-remark": "^2.2.0",
     "gatsby-transformer-sharp": "^2.1.8",
     "prop-types": "^15.6.2",
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
-    "react-helmet": "^5.2.0"
+    "react-helmet": "^5.2.0",
+    "styled-components": "^4.1.3"
   },
   "keywords": [
-    "gatsby"
+    "headless",
+    "eCommerce",
+    "e-commerce",
+    "pilon",
+    "api-first",
+    "pwa",
+    "progressive web application"
   ],
   "license": "MIT",
   "scripts": {
@@ -31,12 +46,5 @@
   },
   "devDependencies": {
     "prettier": "^1.15.2"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
-  },
-  "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
   }
 }
