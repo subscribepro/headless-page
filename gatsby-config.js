@@ -56,6 +56,12 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-plugin-canonical-urls`,
+      options: {
+        siteUrl: `https://headless.page`,
+      },
+    },    
+    {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
         trackingId: "UA-124605239-2",
