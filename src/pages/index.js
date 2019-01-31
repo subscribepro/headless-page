@@ -45,7 +45,41 @@ const Wrapper = styled.div`
         }
 
         .thumbnail {
+          position: relative;
           border: 1px solid #eaecef;
+          .gatsby-image-wrapper {
+            transition: filter, opacity .2s ease-in-out;
+            -webkit-filter: grayscale(0%); /* Ch 23+, Saf 6.0+, BB 10.0+ */
+            filter: grayscale(0%); /* FF 35+ */
+            opacity: 1;
+          }
+        }
+        .thumbnail:hover {
+          .gatsby-image-wrapper {
+            -webkit-filter: grayscale(80%); /* Ch 23+, Saf 6.0+, BB 10.0+ */
+            filter: grayscale(80%); /* FF 35+ */
+            opacity: 0.6;
+          }
+          .overlay {
+            opacity: 1;
+          }
+        }
+        .overlay {
+          transition: opacity .2s ease;
+          opacity: 0;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          -ms-transform: translate(-50%, -50%);
+          text-align: center;
+
+          .view-button {
+            background-color: #00baa1;
+            color: #fff;
+            padding: 12px 16px;
+            line-height: 1;
+          }
         }
         .title {
           display: block;
@@ -102,6 +136,9 @@ const IndexPage = ({ data }) => {
                           node.frontmatter.coverImage.childImageSharp.fluid
                         }
                       />
+                      <div className="overlay">
+                        <div className="view-button">View Details</div>
+                      </div>
                     </div>
                     <span className="title">{title}</span>
                   </Link>
