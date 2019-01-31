@@ -20,4 +20,4 @@ Technically it has a cart, but this site is more of a series of landing pages fo
 
 ## References
 
-* [Cajun Bowfishing | GatsbyJS](https://www.gatsbyjs.org/showcase/cajunbowfishing.com)
+* [Cajun Bowfishing | GatsbyJS.org Showcase](https://www.gatsbyjs.org/showcase/cajunbowfishing.com)

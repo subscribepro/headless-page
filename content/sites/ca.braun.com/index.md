@@ -17,5 +17,5 @@ The ca.braun.com site uses GatsbyJS + Contentful, the headless CMS, to provide r
 
 ## References
 
-* [Braun | GatsbyJS](https://www.gatsbyjs.org/showcase/ca.braun.comen-ca)
+* [Braun | GatsbyJS.org Showcase](https://www.gatsbyjs.org/showcase/ca.braun.comen-ca)
 

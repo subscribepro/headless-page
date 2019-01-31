@@ -18,4 +18,4 @@ F1 Vision is built with a blazing fast GastbyJS front-end and a checkout powered
 
 ## References
 
-* [F1 Vision | GatsbyJS](https://www.gatsbyjs.org/showcase/www.f1vision.com)
+* [F1 Vision | GatsbyJS.org Showcase](https://www.gatsbyjs.org/showcase/www.f1vision.com)

@@ -18,5 +18,6 @@ The Flamingo site features an amazing design, awesome mobile CX/UX and is topped
 
 ## References
 
-* [How We Used Gatsby.js to Build a Blazing Fast E-Commerce Site](https://medium.com/harrys-engineering/how-we-used-gatsby-js-to-build-a-blazing-fast-e-commerce-site-a9818145c67b)
+* [Flamingo Case Study | GatsbyJS.org Blog](https://www.gatsbyjs.org/blog/2019-01-30-flamingo-case-study/)
+* [How We Used Gatsby.js to Build a Blazing Fast E-Commerce Site | Harry's Engineering Blog](https://medium.com/harrys-engineering/how-we-used-gatsby-js-to-build-a-blazing-fast-e-commerce-site-a9818145c67b)
 
