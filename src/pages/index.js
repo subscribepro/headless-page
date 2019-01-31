@@ -2,6 +2,7 @@ import React from 'react'
 import { Link, graphql } from 'gatsby'
 import Img from 'gatsby-image'
 import styled from 'styled-components'
+import { Helmet } from 'react-helmet'
 
 import Layout from '../components/layout'
 import SEO from '../components/seo'
@@ -107,7 +108,19 @@ const IndexPage = ({ data }) => {
 
   return (
     <Layout>
-      <SEO title="Home" keywords={[`headless`, `e-commerce`, `ecommerce`]} />
+      <SEO title="Headless.page | A curated list of headless e-commerce sites" titleTemplate="%s" keywords={[`headless`, `e-commerce`, `ecommerce`]} />
+      <Helmet
+        meta={[
+          {
+            name: `twitter:image`,
+            content: `https:\\\\headless.page\headless.page-home-1200x600.png`,
+          },
+          {
+            name: `og:image`,
+            content: `https:\\\\headless.page\headless.page-home-1200x600.png`,
+          },
+        ]}
+      />
       <Wrapper>
         <h1>A curated list of modern e-commerce sites.</h1>
         <div className="grid">
