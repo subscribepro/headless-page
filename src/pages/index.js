@@ -113,11 +113,11 @@ const IndexPage = ({ data }) => {
         meta={[
           {
             name: `twitter:image`,
-            content: `https:\\\\headless.page\headless.page-home-1200x600.png`,
+            content: `https:\\\\headless.page\\headless.page-home-1200x600.png`,
           },
           {
             name: `og:image`,
-            content: `https:\\\\headless.page\headless.page-home-1200x600.png`,
+            content: `https:\\\\headless.page\\headless.page-home-1200x600.png`,
           },
         ]}
       />
