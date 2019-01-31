@@ -17,7 +17,3 @@ Lancôme rebuilt their mobile site as a PWA to improve performance and conversio
 ## References
 
 * [Lancôme rebuilds their mobile website as a PWA, increases conversions 17%](https://developers.google.com/web/showcase/2017/lancome)
-
-## Preview
-
-![Lancôme Homepage Image](./lancome-usa.com-main.jpg)

@@ -17,7 +17,3 @@ As part of their replatforming effort (moving from Magento 1 to Magento 2), Oliv
 ## References
 
 * [What is Oliver Bonas’s headless e-commerce approach?](https://www.retailconnections.co.uk/articles/oliver-bonas-headless-e-commerce/)
-
-## Preview
-
-![Oliver Bonas Homepage Image](./oliverbonas.com-main.jpg)

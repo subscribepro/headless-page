@@ -14,6 +14,3 @@ tech:
 
 * [Konga | developers.google.com](https://developers.google.com/web/showcase/2016/konga)
 
-## Preview
-
-![Konga Homepage Image](./konga.com-main.jpg)

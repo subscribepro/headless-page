@@ -17,7 +17,3 @@ Magento was used in a partially headless mode together with Drupal to create a f
 ## References
 
 * [Human Element Launches Headless Magento Website for Bowers & Wilkins](https://www.human-element.com/human-element-launches-bowers-wilkins-magento-website/)
-
-## Preview
-
-![Bowers & Wilkins Homepage Image](./bowerswilkins.com-main.jpg)

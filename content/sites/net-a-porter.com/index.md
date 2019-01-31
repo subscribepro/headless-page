@@ -14,7 +14,3 @@ frameworks:
 
 * [NET-A-PORTER](https://developers.google.com/web/showcase/2016/net-a-porter)
 * [POLYMER IN PRODUCTION](http://techblog.net-a-porter.com/2016/02/polymer-in-production/)
-
-## Preview
-
-![NET-A-PORTER Homepage Image](./net-a-porter.com-main.jpg)

@@ -20,7 +20,3 @@ The Yoga Girl site features a front-end built with Nuxt.js and Contentful + Shop
 ## References
 
 * [Yoga Girl – Contentful CMS + Shopify | Paul Rogers](https://paulnrogers.com/headless-shopify/)
-
-## Preview
-
-![Yoga Girl Homepage Image](./yogagirl.com-main.jpg)

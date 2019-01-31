@@ -18,7 +18,3 @@ The Shopify cart + checkout were used in combination with a headless product cat
 ## References
 
 * [GatsbyJS — building fast modern websites with React Kyle Mathews (@kylemathews)](https://www.youtube.com/watch?v=-EftEYczRVI)
-
-## Preview
-
-![Rachio Homepage Image](./rachio.com-main.jpg)

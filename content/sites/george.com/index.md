@@ -18,6 +18,3 @@ In early 2018 the team at George.com upgraded the site to a PWA and saw dramatic
 
 * [George.com enhances the mobile customer experience with new Progressive Web App](https://developers.google.com/web/showcase/2018/asda-george)
 
-## Preview
-
-![George Homepage Image](./george.com-main.jpg)

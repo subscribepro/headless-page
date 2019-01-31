@@ -16,6 +16,3 @@ By leveraging OroCommerce as a centralized backend order management system, Anim
 
 * [Major Pet Foods Supplier Uses OroCommerce to Implement Headless eCommerce for 3PL Support](https://oroinc.com/b2b-ecommerce/blog/major-pet-foods-supplier-uses-orocommerce-to-implement-headless-ecommerce-for-3pl-support)
 
-## Preview
-
-![Animal Supply Co. Homepage Image](./animalsupply.com-main.jpg)

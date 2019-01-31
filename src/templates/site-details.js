@@ -2,19 +2,34 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import styled from 'styled-components'
 import { OutboundLink } from 'gatsby-plugin-google-analytics'
+import Img from 'gatsby-image'
 
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 import Tags from '../components/tags'
 
 const Wrapper = styled.div`
+  margin: 0 auto 8rem;
+  max-width: 800px;
+
   header {
     margin-bottom: 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    @media only screen and (max-width: 480px) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
     h1 {
-      margin-bottom: 8px;
-      font-size: 40px;
+      margin-bottom: 0;
+      font-size: 36px;
+      font-weight: 600;
     }
     span {
+      margin-top: 8px;
+
       a,
       a:link,
       a:visited,
@@ -48,6 +63,7 @@ const Wrapper = styled.div`
 class SiteDetailsTemplate extends React.Component {
   render() {
     const siteDetailsPage = this.props.data.markdownRemark
+    const mainImage = siteDetailsPage.frontmatter.coverImage.childImageSharp.fluid
 
     return (
       <Layout location={this.props.location}>
@@ -56,6 +72,10 @@ class SiteDetailsTemplate extends React.Component {
           description={siteDetailsPage.excerpt}
         />
         <Wrapper>
+          <div className="main-image">
+            <Img fluid={mainImage} />
+          </div>
+
           <header>
             <h1>{siteDetailsPage.frontmatter.title}</h1>
             <span>
@@ -123,6 +143,13 @@ export const pageQuery = graphql`
         tech
         frameworks
         backends
+        coverImage {
+          childImageSharp {
+            fluid(maxWidth: 800) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
       }
     }
   }
