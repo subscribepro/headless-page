@@ -169,7 +169,6 @@ class IndexPage extends Component {
         <Wrapper>
           <h1>A curated list of modern e-commerce sites.</h1>
           <Filters
-            className="tags"
             values={filters}
             update={this.updateQuery}
           />

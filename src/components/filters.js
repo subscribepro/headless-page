@@ -35,8 +35,8 @@ const Wrapper = styled.div`
   }
 `
 
-const Filters = ({ values, className, update }) => (
-  <Wrapper className={className}>
+const Filters = ({ values, update }) => (
+  <Wrapper>
     {values.length > 0 && (
       <ul>
         {values.map(value => {
