@@ -108,7 +108,7 @@ const IndexPage = ({ data }) => {
 
   return (
     <Layout>
-      <SEO title="Headless.page | A curated list of headless e-commerce sites" titleTemplate="%s" keywords={[`headless`, `e-commerce`, `ecommerce`]} />
+      <SEO title="Headless.page | A curated list of modern e-commerce sites" titleTemplate="%s" keywords={[`headless`, `e-commerce`, `ecommerce`]} />
       <Helmet
         meta={[
           {

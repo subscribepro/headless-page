@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Headless.page | A curated list of headless e-commerce sites`,
+    title: `Headless.page | A curated list of modern e-commerce sites`,
     description: `A curated list of headless e-commerce sites.  We've listed sites which are taking advantage of technologies such as PWA (Progress Web Application), Headless, JAMstack, Serverless.`,
     author: `Garth Brantley <garth.brantley@pilon.io>`,
     siteUrl: `https://headless.page`,
