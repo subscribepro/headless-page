@@ -12,6 +12,7 @@ const Wrapper = styled.div`
       display: inline;
       list-style: none;
       cursor: pointer;
+      transition: color 0.2s ease;
     }
     li:hover {
       color: #00baa1;
