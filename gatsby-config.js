@@ -1,9 +1,17 @@
+const siteName = 'Headless.page'
+const siteSlogan = 'A curated list of modern e-commerce sites'
+const siteUrl = `https://headless.page/`
+
 module.exports = {
   siteMetadata: {
-    title: `Headless.page | A curated list of modern e-commerce sites`,
-    description: `A curated list of headless e-commerce sites.  We've listed sites which are taking advantage of technologies such as PWA (Progress Web Application), Headless, JAMstack, Serverless.`,
+    title: `${siteName} | ${siteSlogan}`,
+    description: `A curated list of modern, headless e-commerce sites.  We've listed sites which are taking advantage of technologies such as PWA (Progress Web Application), Headless, JAMstack, API-first back-ends, and similar.`,
     author: `Garth Brantley <garth.brantley@pilon.io>`,
-    siteUrl: `https://headless.page`,
+    twitterSite: `@Pilon_io`,
+    twitterCreator: `@garthbrantley`,
+    siteName,
+    siteSlogan,
+    siteUrl,
   },
   plugins: [
     {
@@ -48,7 +56,7 @@ module.exports = {
       options: {
         name: `Headless.page`,
         short_name: `Headless.page`,
-        start_url: `https://headless.page`,
+        start_url: siteUrl,
         background_color: `#fff`,
         theme_color: `#fff`,
         display: `minimal-ui`,
@@ -58,7 +66,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-canonical-urls`,
       options: {
-        siteUrl: `https://headless.page`,
+        siteUrl,
       },
     },    
     {

@@ -3,13 +3,34 @@ import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
 
-function SEO({ description, lang, meta, keywords, title, titleTemplate }) {
+function SEO({
+  description,
+  lang,
+  meta,
+  keywords,
+  title,
+  titleTemplate,
+  ogImageUrl,
+  twitterCard,
+  pageUrl,
+}) {
   return (
     <StaticQuery
       query={detailsQuery}
       render={data => {
-        const metaDescription =
-          description || data.site.siteMetadata.description
+        const siteMetadata = data.site.siteMetadata
+        const metaDescription = description || siteMetadata.description
+        const metaKeywords = keywords.concat([
+          `headless`,
+          `e-commerce`,
+          `ecommerce`,
+          `pwa`,
+          `curated`,
+          `list`,
+          `api-first`,
+          `jamstack`,
+        ])
+
         return (
           <Helmet
             htmlAttributes={{
@@ -39,16 +60,20 @@ function SEO({ description, lang, meta, keywords, title, titleTemplate }) {
                 content: `website`,
               },
               {
+                property: `og:url`,
+                content: pageUrl ? pageUrl : siteMetadata.siteUrl,
+              },
+              {
                 name: `twitter:card`,
-                content: `summary_large_image`,
+                content: twitterCard,
               },
               {
                 name: `twitter:site`,
-                content: `@Pilon_io`,
+                content: siteMetadata.twitterSite,
               },
               {
                 name: `twitter:creator`,
-                content: `@garthbrantley`,
+                content: siteMetadata.twitterCreator,
               },
               {
                 name: `twitter:title`,
@@ -60,10 +85,24 @@ function SEO({ description, lang, meta, keywords, title, titleTemplate }) {
               },
             ]
               .concat(
-                keywords.length > 0
+                ogImageUrl
+                  ? [
+                      {
+                        property: `og:image`,
+                        content: ogImageUrl,
+                      },
+                      {
+                        name: `twitter:image`,
+                        content: ogImageUrl,
+                      },
+                    ]
+                  : []
+              )
+              .concat(
+                metaKeywords.length > 0
                   ? {
                       name: `keywords`,
-                      content: keywords.join(`, `),
+                      content: metaKeywords.join(`, `).toLowerCase(),
                     }
                   : []
               )
@@ -79,6 +118,7 @@ SEO.defaultProps = {
   lang: `en`,
   meta: [],
   keywords: [],
+  twitterCard: `summary`,
 }
 
 SEO.propTypes = {
@@ -88,6 +128,9 @@ SEO.propTypes = {
   keywords: PropTypes.arrayOf(PropTypes.string),
   title: PropTypes.string.isRequired,
   titleTemplate: PropTypes.string,
+  ogImageUrl: PropTypes.string.isRequired,
+  twitterCard: PropTypes.string,
+  pageUrl: PropTypes.string,
 }
 
 export default SEO
@@ -99,6 +142,9 @@ const detailsQuery = graphql`
         title
         description
         author
+        twitterSite
+        twitterCreator
+        siteUrl
       }
     }
   }

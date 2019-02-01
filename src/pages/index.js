@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import { graphql, navigate } from 'gatsby'
 import styled from 'styled-components'
 import qs from 'qs'
-import { Helmet } from 'react-helmet'
 
 import Layout from '../components/layout'
 import SEO from '../components/seo'
@@ -146,32 +145,16 @@ class IndexPage extends Component {
     return (
       <Layout>
         <SEO
-          title="Headless.page | A curated list of modern e-commerce sites"
+          title={data.site.siteMetadata.title}
           titleTemplate="%s"
-          keywords={[`headless`, `e-commerce`, `ecommerce`]}
-        />
-        <Helmet
-          meta={[
-            {
-              name: `twitter:image`,
-              content: `https://headless.page/headless.page-home-1200x600.png`,
-            },
-            {
-              property: `og:image`,
-              content: `https://headless.page/headless.page-home-1200x600.png`,
-            },
-            {
-              property: `og:url`,
-              content: `https://headless.page/`,
-            },
-          ]}
+          ogImageUrl={`${
+            data.site.siteMetadata.siteUrl
+          }headless.page-home-1200x600.png`}
+          twitterCard="summary_large_image"
         />
         <Wrapper>
-          <h1>A curated list of modern e-commerce sites.</h1>
-          <Filters
-            values={filters}
-            update={this.updateQuery}
-          />
+          <h1>{data.site.siteMetadata.siteSlogan}.</h1>
+          <Filters values={filters} update={this.updateQuery} />
           <div className="grid">
             {sites.map(({ node }) => (
               <SiteCard
@@ -192,6 +175,13 @@ export default IndexPage
 
 export const query = graphql`
   query {
+    site {
+      siteMetadata {
+        title
+        siteUrl
+        siteSlogan
+      }
+    }
     allMarkdownRemark(
       sort: { fields: [frontmatter___dateAdded], order: DESC }
     ) {

@@ -71,6 +71,15 @@ class SiteDetailsTemplate extends React.Component {
         <SEO
           title={siteDetailsPage.frontmatter.title}
           description={siteDetailsPage.excerpt}
+          ogImageUrl={
+            this.props.data.site.siteMetadata.siteUrl.slice(0, -1) +
+            siteDetailsPage.frontmatter.coverImage.childImageSharp.fixed.src
+          }
+          pageUrl={
+            this.props.data.site.siteMetadata.siteUrl.slice(0, -1) +
+            this.props.pageContext.slug
+          }
+          keywords={[siteDetailsPage.frontmatter.title]}
         />
         <Wrapper>
           <div className="main-image">
@@ -133,6 +142,13 @@ export default SiteDetailsTemplate
 
 export const pageQuery = graphql`
   query SiteDetailsBySlug($slug: String!) {
+    site {
+      siteMetadata {
+        title
+        siteUrl
+        siteSlogan
+      }
+    }
     markdownRemark(fields: { slug: { eq: $slug } }) {
       id
       excerpt(pruneLength: 160)
@@ -148,6 +164,9 @@ export const pageQuery = graphql`
           childImageSharp {
             fluid(maxWidth: 800) {
               ...GatsbyImageSharpFluid
+            }
+            fixed(width: 800) {
+              ...GatsbyImageSharpFixed
             }
           }
         }
