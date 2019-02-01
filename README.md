@@ -1,4 +1,6 @@
-# Headless.page | A curated list of modern e-commerce sites.
+Headless.page | A curated list of modern e-commerce sites.
+====================
+[![Netlify Status](https://api.netlify.com/api/v1/badges/7fe090e6-3907-47ac-b956-a38e1617bff9/deploy-status)](https://app.netlify.com/sites/headless-page/deploys)
 
 ## Overview
 
