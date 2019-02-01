@@ -39,6 +39,14 @@ const Filters = ({ values, update }) => (
   <Wrapper>
     {values.length > 0 && (
       <ul>
+        <li
+          onClick={() =>
+            update(() => [])
+          }
+          key="reset"
+        >
+          <Cancel /> {`reset`}
+        </li>
         {values.map(value => {
           return (
             <li

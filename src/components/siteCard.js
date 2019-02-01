@@ -17,7 +17,7 @@ const SiteCard = ({ node, filters, update }) => {
     tags = tags.concat(node.frontmatter.backends)
   }
 
-  if (filters.length === 0 || filters.some(f => tags.includes(f))) {
+  if (filters.length === 0 || filters.every(f => tags.includes(f))) {
     return (
       <div className="site-container" key={node.fields.slug}>
         <div className="site">
