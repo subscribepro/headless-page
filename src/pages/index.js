@@ -1,12 +1,13 @@
-import React from 'react'
-import { Link, graphql } from 'gatsby'
-import Img from 'gatsby-image'
+import React, { Component } from 'react'
+import { graphql, navigate } from 'gatsby'
 import styled from 'styled-components'
+import qs from 'qs'
 import { Helmet } from 'react-helmet'
 
 import Layout from '../components/layout'
 import SEO from '../components/seo'
-import Tags from '../components/tags'
+import SiteCard from '../components/siteCard'
+import Filters from '../components/filters'
 
 const Wrapper = styled.div`
   .grid {
@@ -103,71 +104,74 @@ const Wrapper = styled.div`
   }
 `
 
-const IndexPage = ({ data }) => {
-  const sites = data.allMarkdownRemark.edges
+class IndexPage extends Component {
+  state = {
+    filters: []
+  }
 
-  return (
-    <Layout>
-      <SEO title="Headless.page | A curated list of modern e-commerce sites" titleTemplate="%s" keywords={[`headless`, `e-commerce`, `ecommerce`]} />
-      <Helmet
-        meta={[
-          {
-            name: `twitter:image`,
-            content: `https://headless.page/headless.page-home-1200x600.png`,
-          },
-          {
-            property: `og:image`,
-            content: `https://headless.page/headless.page-home-1200x600.png`,
-          },
-          {
-            property: `og:url`,
-            content: `https://headless.page/`,
-          },
-        ]}
-      />
-      <Wrapper>
-        <h1>A curated list of modern e-commerce sites.</h1>
-        <div className="grid">
-          {sites.map(({ node }) => {
-            const title = node.frontmatter.title || node.fields.slug
+  componentDidMount = () => {
+    const {
+      location: { search },
+    } = this.props
 
-            // Collect tags
-            var tags = []
-            if (node.frontmatter.tech) {
-              tags = tags.concat(node.frontmatter.tech)
-            }
-            if (node.frontmatter.frameworks) {
-              tags = tags.concat(node.frontmatter.frameworks)
-            }
-            if (node.frontmatter.backends) {
-              tags = tags.concat(node.frontmatter.backends)
-            }
+    this.getDerivedStateFromQuery(search)
+  }
 
-            return (
-              <div className="site-container" key={node.fields.slug}>
-                <div className="site">
-                  <Link to={`sites${node.fields.slug}`}>
-                    <div className="thumbnail">
-                      <Img
-                        fluid={
-                          node.frontmatter.coverImage.childImageSharp.fluid
-                        }
-                      />
-                      <div className="overlay">
-                        <div className="view-button">View Details</div>
-                      </div>
-                    </div>
-                    <span className="title">{title}</span>
-                  </Link>
-                  <Tags className="tags" values={tags} />
-                </div>
-              </div>
-            )
-          })}
-        </div>
-      </Wrapper>
-    </Layout>
-  )
+  getDerivedStateFromQuery = search => {
+    const { tag } = qs.parse(search.replace(`?`, ``))
+    this.setState(() => {
+      return {
+        filters: tag || [],
+      }
+    })
+  }
+
+  updateQuery = fn => {
+    const { location: { pathname } } = this.props
+
+    const newQuery = fn(this.state)
+    const queryString = qs.stringify({ tag: newQuery })
+
+    navigate(`${pathname}?${queryString}`)
+    this.getDerivedStateFromQuery(queryString)
+  }
+
+  render() {
+    const { data } = this.props
+    const { filters } = this.state
+    const sites = data.allMarkdownRemark.edges
+
+    return (
+      <Layout>
+        <SEO title="Headless.page | A curated list of modern e-commerce sites" titleTemplate="%s" keywords={[`headless`, `e-commerce`, `ecommerce`]} />
+        <Helmet
+          meta={[
+            {
+              name: `twitter:image`,
+              content: `https://headless.page/headless.page-home-1200x600.png`,
+            },
+            {
+              property: `og:image`,
+              content: `https://headless.page/headless.page-home-1200x600.png`,
+            },
+            {
+              property: `og:url`,
+              content: `https://headless.page/`,
+            },
+          ]}
+        />
+        <Wrapper>
+          <h1>A curated list of modern e-commerce sites.</h1>
+          <Filters className="tags" values={filters} update={this.updateQuery} />
+          <div className="grid">
+            {sites.map(({ node }) => (
+              <SiteCard update={this.updateQuery} key={node.fields.slug} node={node} filters={filters} />
+            ))}
+          </div>
+        </Wrapper>
+      </Layout>
+    )
+  }
 }
 
 export default IndexPage
