@@ -211,7 +211,10 @@ const Layout = ({ children }) => (
                   <em>by</em>
                 </span>
                 <span className="pilon-logo">
-                  <OutboundLink href="https://pilon.io" aria-label="Visit Pilon website">
+                  <OutboundLink
+                    href="https://pilon.io"
+                    aria-label="Visit Pilon website"
+                  >
                     <Img fluid={data.pilonLogo.childImageSharp.fluid} />
                   </OutboundLink>
                 </span>

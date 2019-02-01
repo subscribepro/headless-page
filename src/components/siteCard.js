@@ -4,7 +4,6 @@ import { Link } from 'gatsby'
 
 import Tags from './tags'
 
-
 const SiteCard = ({ node, filters, update }) => {
   // Collect tags
   var tags = []
@@ -24,16 +23,14 @@ const SiteCard = ({ node, filters, update }) => {
         <div className="site">
           <Link to={`sites${node.fields.slug}`}>
             <div className="thumbnail">
-              <Img
-                fluid={
-                  node.frontmatter.coverImage.childImageSharp.fluid
-                }
-              />
+              <Img fluid={node.frontmatter.coverImage.childImageSharp.fluid} />
               <div className="overlay">
                 <div className="view-button">View Details</div>
               </div>
             </div>
-            <span className="title">{node.frontmatter.title || node.fields.slug}</span>
+            <span className="title">
+              {node.frontmatter.title || node.fields.slug}
+            </span>
           </Link>
           <Tags className="tags" values={tags} update={update} />
         </div>

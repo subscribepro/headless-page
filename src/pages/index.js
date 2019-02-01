@@ -50,7 +50,7 @@ const Wrapper = styled.div`
           position: relative;
           border: 1px solid #eaecef;
           .gatsby-image-wrapper {
-            transition: filter, opacity .2s ease-in-out;
+            transition: filter, opacity 0.2s ease-in-out;
             -webkit-filter: grayscale(0%); /* Ch 23+, Saf 6.0+, BB 10.0+ */
             filter: grayscale(0%); /* FF 35+ */
             opacity: 1;
@@ -67,7 +67,7 @@ const Wrapper = styled.div`
           }
         }
         .overlay {
-          transition: opacity .2s ease;
+          transition: opacity 0.2s ease;
           opacity: 0;
           position: absolute;
           top: 50%;
@@ -106,7 +106,7 @@ const Wrapper = styled.div`
 
 class IndexPage extends Component {
   state = {
-    filters: []
+    filters: [],
   }
 
   componentDidMount = () => {
@@ -127,7 +127,9 @@ class IndexPage extends Component {
   }
 
   updateQuery = fn => {
-    const { location: { pathname } } = this.props
+    const {
+      location: { pathname },
+    } = this.props
 
     const newQuery = fn(this.state)
     const queryString = qs.stringify({ tag: newQuery })
@@ -143,7 +145,11 @@ class IndexPage extends Component {
 
     return (
       <Layout>
-        <SEO title="Headless.page | A curated list of modern e-commerce sites" titleTemplate="%s" keywords={[`headless`, `e-commerce`, `ecommerce`]} />
+        <SEO
+          title="Headless.page | A curated list of modern e-commerce sites"
+          titleTemplate="%s"
+          keywords={[`headless`, `e-commerce`, `ecommerce`]}
+        />
         <Helmet
           meta={[
             {
@@ -162,10 +168,19 @@ class IndexPage extends Component {
         />
         <Wrapper>
           <h1>A curated list of modern e-commerce sites.</h1>
-          <Filters className="tags" values={filters} update={this.updateQuery} />
+          <Filters
+            className="tags"
+            values={filters}
+            update={this.updateQuery}
+          />
           <div className="grid">
             {sites.map(({ node }) => (
-              <SiteCard update={this.updateQuery} key={node.fields.slug} node={node} filters={filters} />
+              <SiteCard
+                update={this.updateQuery}
+                key={node.fields.slug}
+                node={node}
+                filters={filters}
+              />
             ))}
           </div>
         </Wrapper>

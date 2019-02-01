@@ -63,7 +63,8 @@ const Wrapper = styled.div`
 class SiteDetailsTemplate extends React.Component {
   render() {
     const siteDetailsPage = this.props.data.markdownRemark
-    const mainImage = siteDetailsPage.frontmatter.coverImage.childImageSharp.fluid
+    const mainImage =
+      siteDetailsPage.frontmatter.coverImage.childImageSharp.fluid
 
     return (
       <Layout location={this.props.location}>
