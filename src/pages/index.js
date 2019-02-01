@@ -116,11 +116,11 @@ const IndexPage = ({ data }) => {
             content: `https://headless.page/headless.page-home-1200x600.png`,
           },
           {
-            name: `og:image`,
+            property: `og:image`,
             content: `https://headless.page/headless.page-home-1200x600.png`,
           },
           {
-            name: `og:url`,
+            property: `og:url`,
             content: `https://headless.page/`,
           },
         ]}
