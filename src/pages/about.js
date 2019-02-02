@@ -12,16 +12,23 @@ const Wrapper = styled.div`
   }
 `
 
-const AboutPage = ({data}) => (
+const AboutPage = ({ data }) => (
   <Layout>
-        <SEO
-          title="About"
-          ogImageUrl={`${
-            data.site.siteMetadata.siteUrl
-          }headless.page-home-1200x600.png`}
-          twitterCard="summary_large_image"
-          keywords={[`Pilon`, `API-First`, `micro-services`, `GatsbyJS`, `Magento`, `Shopify`]}
-        />
+    <SEO
+      title="About"
+      ogImageUrl={`${
+        data.site.siteMetadata.siteUrl
+      }headless.page-home-1200x600.png`}
+      twitterCard="summary_large_image"
+      keywords={[
+        `Pilon`,
+        `API-First`,
+        `micro-services`,
+        `GatsbyJS`,
+        `Magento`,
+        `Shopify`,
+      ]}
+    />
     <Wrapper>
       <h1>About Headless.page</h1>
       <p>
@@ -48,7 +55,6 @@ const AboutPage = ({data}) => (
 )
 
 export default AboutPage
-
 
 export const query = graphql`
   query {

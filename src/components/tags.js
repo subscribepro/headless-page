@@ -23,9 +23,8 @@ const Wrapper = styled.div`
 const Tags = ({ values, className, update }) => {
   const click = value =>
     update
-      ? update(
-          ({ filters }) =>
-            filters.indexOf(value) === -1 ? filters.concat([value]) : filters
+      ? update(({ filters }) =>
+          filters.indexOf(value) === -1 ? filters.concat([value]) : filters
         )
       : navigate(`/?${qs.stringify({ tag: [value] })}`)
 
