@@ -25,7 +25,7 @@ const Tags = ({ values, className, update }) => {
     update
       ? update(
           ({ filters }) =>
-            filters.indexOf(value) === -1 && filters.concat([value])
+            filters.indexOf(value) === -1 ? filters.concat([value]) : filters
         )
       : navigate(`/?${qs.stringify({ tag: [value] })}`)
 
