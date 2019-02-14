@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import { graphql, navigate } from 'gatsby'
 import styled from 'styled-components'
 import qs from 'qs'
-import shuffle from 'lodash.shuffle'
 
 import Layout from '../components/layout'
 import SEO from '../components/seo'
@@ -141,7 +140,7 @@ class IndexPage extends Component {
   render() {
     const { data } = this.props
     const { filters } = this.state
-    const sites = shuffle(data.allMarkdownRemark.edges)
+    const sites = data.allMarkdownRemark.edges
 
     return (
       <Layout>
