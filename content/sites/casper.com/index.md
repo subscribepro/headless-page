@@ -3,10 +3,10 @@ title: Casper
 dateAdded: '2019-02-20'
 coverImage: ./casper.com-main.jpg
 url: https://casper.com/
-shortDescription: Leading US pet foods and supplies distributor.
+shortDescription: An obsessively engineered mattress at a shockingly fair price. 
 tech:
     - Headless
-    - JAMstack
+    - API-First Backend
 frameworks:
     - React
 backends:
