@@ -17,4 +17,3 @@ backends:
 ## References
 
 * [Examples of Headless Shopify...Implementations | Paul Rogers Blog](https://paulnrogers.com/headless-shopify/)
-

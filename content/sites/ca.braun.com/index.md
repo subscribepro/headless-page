@@ -9,6 +9,7 @@ frameworks:
     - React
 tech:
     - Headless
+    - API-First Back-end
 backends:
     - Contentful    
 ---
