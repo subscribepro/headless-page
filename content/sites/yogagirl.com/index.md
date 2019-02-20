@@ -6,7 +6,7 @@ url: https://www.yogagirl.com/
 shortDescription: A community, a movement and a lifestyle.
 tech:
     - Headless
-    - API-First Backend
+    - API-First Back-end
 backends:
     - Contentful
     - Shopify

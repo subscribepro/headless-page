@@ -6,7 +6,7 @@ url: https://casper.com/
 shortDescription: An obsessively engineered mattress at a shockingly fair price. 
 tech:
     - Headless
-    - API-First Backend
+    - API-First Back-end
 frameworks:
     - React
 backends:
