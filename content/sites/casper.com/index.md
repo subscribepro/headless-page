@@ -9,9 +9,11 @@ tech:
     - JAMstack
 frameworks:
     - React
+backends:
+    - Contentful    
 ---
 
-The Casper site is definitely using React and they seem to be using their CMS in a headless way based on this write-up in their tech blog.
+The Casper site is definitely using React and doing some innovative serverless stuff.  It looks like they are using the Contentful headless CMS.  The Casper team has published a nice write-up in their tech blog on some cool image stuff they are doing also.
 
 ## References
 
