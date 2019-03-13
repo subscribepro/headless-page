@@ -12,7 +12,7 @@ frameworks:
     - React
 backends:
     - Front-Commerce    
-    - Wordpress
+    - WordPress
     - Algolia
 ---
 
