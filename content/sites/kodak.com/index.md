@@ -8,7 +8,7 @@ tech:
     - Headless
 backends:
     - BigCommerce
-    - WordPress    
+    - WordPress
 ---
 
 > "Kodak uses WordPress on the front-end to host their products, blog content, and merchandising. For checkout, they outsource PCI compliance, checkout uptime and security to BigCommerce."
@@ -16,4 +16,3 @@ backends:
 ## References
 
 * [Headless Commerce Examples | Big Commerce](https://www.bigcommerce.com/blog/headless-commerce/#headless-commerce-examples)
-
