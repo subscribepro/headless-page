@@ -12,19 +12,17 @@ frameworks:
   - React
 backends:
   - Front-Commerce
-  - Magento1
+  - Magento
 ---
 
-A Front-Commerce project using a headless Magento1 store. Multi-store, multi-lingual and multi-currency.
+A Front-Commerce project using a headless Magento 1 store. Multi-store, multi-lingual and multi-currency.
 This is the first online store with Magento 1 (OpenMage's Magento LTS) and Front-Commerce.
 
-<br/>
+## Features
 
-Features:
-
-> - A BtoC area,
-> - A BtoB area reserved for professionals with efficient cart,
-> - Advanced management of Magento 1 widgets
+- A B2C area
+- A B2B area reserved for professionals with efficient cart
+- Advanced management of Magento 1 widgets
 
 ## References
 

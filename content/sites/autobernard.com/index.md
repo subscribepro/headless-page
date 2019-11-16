@@ -18,17 +18,15 @@ backends:
 
 A Front-Commerce project using a headless Magento2 store and Algolia integration.
 
-<br/>
-
 > "The main and primary goal of this new web platform is to support the group's multi-channel strategy by offering users the possibility to book and eventually buy their vehicles directly online."
 
-Features:
+## Features
 
-> - A complete and detailed catalogue of the vehicles available with relevant filters (maximum number of kilometres, maximum price, brand, conversion premium, etc.),
-> - The ability for users, at any time, to be able to compare the characteristics of 3 vehicles in parallel,
-> - The possibility for Internet users to request a funding, book and pay for their reservations online,
-> - The possibility of making an appointment in the workshop or requesting a quote,
-> - Define alerts and searches,
+- A complete and detailed catalogue of the vehicles available with relevant filters (maximum number of kilometers, maximum price, brand, conversion premium, etc.)
+- The ability for users, at any time, to be able to compare the characteristics of 3 vehicles in parallel
+- The possibility for Internet users to request a funding, book and pay for their reservations online
+- The possibility of making an appointment in the workshop or requesting a quote
+- Define alerts and searches
 
 ## References
 
