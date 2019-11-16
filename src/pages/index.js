@@ -149,7 +149,7 @@ class IndexPage extends Component {
           titleTemplate="%s"
           ogImageUrl={`${
             data.site.siteMetadata.siteUrl
-          }headless.page-home-1200x600.png`}
+          }headless-page-home-1200x600.png`}
           twitterCard="summary_large_image"
         />
         <Wrapper>

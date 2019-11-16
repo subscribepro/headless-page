@@ -16,7 +16,7 @@ const AboutPage = ({ data }) => (
   <Layout>
     <SEO
       title="About"
-      ogImageUrl={`${data.site.siteMetadata.siteUrl}headless.page-home-1200x600.png`}
+      ogImageUrl={`${data.site.siteMetadata.siteUrl}headless-page-home-1200x600.png`}
       twitterCard="summary_large_image"
       keywords={[
         `Subscribe Pro`,
