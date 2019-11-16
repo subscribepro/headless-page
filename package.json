@@ -2,8 +2,8 @@
   "name": "headless-page",
   "private": true,
   "description": "A curated list of headless e-commerce sites",
-  "version": "1.0.0",
-  "author": "Garth Brantley <garth.brantley@pilon.io>",
+  "version": "1.1.0",
+  "author": "Garth Brantley <garth.brantley@subscribepro.com>",
   "dependencies": {
     "babel-plugin-styled-components": "^1.10.0",
     "gatsby": "^2.17.15",
@@ -33,7 +33,7 @@
     "headless",
     "eCommerce",
     "e-commerce",
-    "pilon",
+    "subscribe pro",
     "api-first",
     "pwa",
     "progressive web application"

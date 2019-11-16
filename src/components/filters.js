@@ -28,7 +28,7 @@ const Wrapper = styled.div`
       display: block;
       list-style: none;
       button {
-        background-color: #00baa1;
+        background-color: #e0970b;
         color: #fff;
         margin: 0 8px 10px 0;
         padding: 6px 12px;
@@ -51,7 +51,7 @@ const Wrapper = styled.div`
       transition: color 0.2s ease;
     }
     button:hover {
-      color: #00baa1;
+      color: #ffac0d;
     }
   }
 `

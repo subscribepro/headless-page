@@ -50,7 +50,7 @@ const GlobalStyles = createGlobalStyle`
     color: #777;
   }
   a:hover {
-    color: #00baa1;
+    color: #ffac0d;
   }
 `
 
@@ -83,7 +83,7 @@ const Wrapper = styled.div`
           color: #464646;      
         }
       }
-      .by-pilon {
+      .by-subscribe-pro {
         display: flex;
         margin-top: 4px;
 
@@ -92,8 +92,8 @@ const Wrapper = styled.div`
           font-size: 14px;
         }
 
-        .pilon-logo {
-          width: 52px;
+        .subscribe-pro-logo {
+          width: 140px;
           margin-left: 6px;
         }
       }
@@ -118,7 +118,7 @@ const Wrapper = styled.div`
       transition: border-color .2s ease;
     }
     input:focus {
-      border-color: #00baa1;
+      border-color: #ffac0d;
     }
 
     svg {
@@ -130,7 +130,7 @@ const Wrapper = styled.div`
   }
   .search-box:hover {
     input {
-      border-color: #00baa1;
+      border-color: #ffac0d;
     }
   }
 
@@ -155,7 +155,7 @@ const Wrapper = styled.div`
       }
       a:hover {
         text-decoration: none;
-        color: #00baa1;
+        color: #ffac0d;
       }
 
       svg {
@@ -166,7 +166,7 @@ const Wrapper = styled.div`
         transition: fill .2s ease;
       }
       svg:hover {
-        fill: #00baa1;
+        fill: #ffac0d;
       }
     }
   }
@@ -176,7 +176,9 @@ const Layout = ({ children }) => (
   <StaticQuery
     query={graphql`
       query LayoutQuery {
-        pilonLogo: file(relativePath: { eq: "pilon-logo@3x.png" }) {
+        subscribeProLogo: file(
+          relativePath: { eq: "subscribe-pro-logo-800x168.png" }
+        ) {
           childImageSharp {
             fluid(maxWidth: 104) {
               ...GatsbyImageSharpFluid_tracedSVG
@@ -206,16 +208,16 @@ const Layout = ({ children }) => (
               <span className="site-name">
                 <Link to="/">Headless.page</Link>
               </span>
-              <span className="by-pilon">
+              <span className="by-subscribe-pro">
                 <span className="by">
                   <em>by</em>
                 </span>
-                <span className="pilon-logo">
+                <span className="subscribe-pro-logo">
                   <OutboundLink
-                    href="https://pilon.io"
-                    aria-label="Visit Pilon website"
+                    href="https://www.subscribepro.com"
+                    aria-label="Visit Subscribe Pro website"
                   >
-                    <Img fluid={data.pilonLogo.childImageSharp.fluid} />
+                    <Img fluid={data.subscribeProLogo.childImageSharp.fluid} />
                   </OutboundLink>
                 </span>
               </span>
@@ -226,7 +228,7 @@ const Layout = ({ children }) => (
               </li>
               <li>
                 <OutboundLink
-                  href="https://github.com/pilon-io/headless-page"
+                  href="https://github.com/subscribepro/headless-page"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="See site code on GitHub"

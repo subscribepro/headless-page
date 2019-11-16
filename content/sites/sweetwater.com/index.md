@@ -14,5 +14,5 @@ Sweetwater has very deep site, filled with asset-rich content. And with those pa
 
 ## References
 
-* [What is PWA (Progressive Web Application) and how does it apply to e-commerce?](https://medium.com/pilon/pwa-for-e-commerce-1b8db3d07a16)
+* [What is PWA (Progressive Web Application) and how does it apply to e-commerce?](https://medium.com/subscribe-pro-dev-blog/pwa-for-e-commerce-1b8db3d07a16)
 * [Sweetwater.com builds a PWA to speed up its mobile site](https://www.digitalcommerce360.com/2018/07/26/sweetwater-com-builds-a-pwa-to-speed-up-its-site/)

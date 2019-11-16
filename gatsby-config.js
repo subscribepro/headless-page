@@ -6,8 +6,8 @@ module.exports = {
   siteMetadata: {
     title: `${siteName} | ${siteSlogan}`,
     description: `A curated list of modern, headless e-commerce sites.  We've listed sites which are taking advantage of technologies such as PWA (Progress Web Application), Headless, JAMstack, API-first back-ends, and similar.`,
-    author: `Garth Brantley <garth.brantley@pilon.io>`,
-    twitterSite: `@Pilon_io`,
+    author: `Garth Brantley <garth.brantley@subscribepro.com>`,
+    twitterSite: `@subscribeprosw`,
     twitterCreator: `@garthbrantley`,
     siteName,
     siteSlogan,

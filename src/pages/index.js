@@ -76,7 +76,7 @@ const Wrapper = styled.div`
           text-align: center;
 
           .view-button {
-            background-color: #00baa1;
+            background-color: #e0970b;
             color: #fff;
             padding: 12px 16px;
             line-height: 1;

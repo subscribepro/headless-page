@@ -1,12 +1,12 @@
-Headless.page | A curated list of modern e-commerce sites.
-====================
+# Headless.page | A curated list of modern e-commerce sites.
+
 [![Netlify Status](https://api.netlify.com/api/v1/badges/7fe090e6-3907-47ac-b956-a38e1617bff9/deploy-status)](https://app.netlify.com/sites/headless-page/deploys)
 
 ## Overview
 
-Headless.page is a GatsbyJS site featuring a curated list of modern e-commerce sites with tech like headless architecture, API-first backends, PWA (Progress Web Application) features, etc.
+Headless.page is a GatsbyJS site featuring a curated list of modern e-commerce sites with tech like headless architecture, API-first back-ends, PWA (Progress Web Application) features, etc.
 
-To submit content, simply submit a PR or email info@pilon.io.
+To submit content, simply submit a PR or email info@subscribepro.com.
 
 ## Running in Development
 
@@ -14,10 +14,9 @@ To submit content, simply submit a PR or email info@pilon.io.
 
 2. Run:
 
-    ```bash
-    yarn install
-    gatsby develop
-    ```
+   ```bash
+   npm install
+   npm run develop
+   ```
 
 3. Connect to the local site in a browser at `http:\\localhost:8000`.
-

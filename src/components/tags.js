@@ -15,7 +15,7 @@ const Wrapper = styled.div`
       transition: color 0.2s ease;
     }
     li:hover {
-      color: #00baa1;
+      color: #ffac0d;
     }
   }
 `
