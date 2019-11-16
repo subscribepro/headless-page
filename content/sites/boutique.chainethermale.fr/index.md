@@ -7,7 +7,6 @@ shortDescription: Gift shop for thermal cures and spas
 tech:
   - Headless
   - API-First Back-end
-  - PWA
 frameworks:
   - React
 backends:
