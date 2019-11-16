@@ -72,11 +72,11 @@ class SiteDetailsTemplate extends React.Component {
           title={siteDetailsPage.frontmatter.title}
           description={siteDetailsPage.excerpt}
           ogImageUrl={
-            this.props.data.site.siteMetadata.siteUrl.slice(0, -1) +
+            this.props.data.site.siteMetadata.siteUrl +
             siteDetailsPage.frontmatter.coverImage.childImageSharp.fixed.src
           }
           pageUrl={
-            this.props.data.site.siteMetadata.siteUrl.slice(0, -1) +
+            this.props.data.site.siteMetadata.siteUrl +
             this.props.pageContext.slug
           }
           keywords={[siteDetailsPage.frontmatter.title]}

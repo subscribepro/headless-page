@@ -61,7 +61,7 @@ function SEO({
               },
               {
                 property: `og:url`,
-                content: pageUrl ? pageUrl : siteMetadata.siteUrl,
+                content: pageUrl ? pageUrl : siteMetadata.siteUrl + '/',
               },
               {
                 name: `twitter:card`,
