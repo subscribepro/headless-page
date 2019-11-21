@@ -16,3 +16,4 @@ backends:
 ## References
 
 * [PWA Studio Stats](https://pwastudio-stats.com/)
+* [PWA for UK Meds redefines performance on Magento](https://wearejh.com/case-study/pwa-uk-meds-redefines-performance-magento/)
